@@ -1,7 +1,9 @@
+@import "colors";
 html body {
   font-family: "Lucida Sans", sans-serif;
   margin: 0;
 }
+
 @media only screen and (max-width: 1000px) {
   .header {
     width: 100%;
@@ -20,24 +22,33 @@ html body {
       position: absolute;
       visibility: visible;
       background: #3f3f3f;
-      border: solid 1px #e4bb7a;
+      border: solid 1px $motiveColor;
       width:80%;
-      padding-top:0px;
-      padding-left:0px;
-      padding-bottom: 20px;
-      margin-top:70px;
-      margin-left:0px !important;
+      padding: {
+        top:0px;
+        left:0px;
+        bottom: 20px;
+      }
+      margin: {
+        top:70px;
+        left:0px !important;
+      }
       }
       li{
         display: block !important;
-        padding: 0px;
-        padding-top:10px;
-        padding-bottom: 10px;
+        padding: {
+          right: 0px;
+          left: 0px;
+          top: 10px;
+          bottom: 10px;
+        }
         margin:0 px;
-        margin-left:0px !important;
+        margin: {
+          left:0px !important;
+        }
         text-align: center;
         &:hover{
-          background-color: #e4bb7a;
+          background-color: $motiveColor;
         }
       }
       a{
@@ -46,8 +57,10 @@ html body {
       }
     }
     .pagelogo{
-      background-image: url('../img/Steakville.png') !important;
-      background-size: contain;
+      background: {
+        image: url('../img/Steakville.png') !important;
+        size: contain;
+      }
       width:200px !important;
     }
     .hamburger{
@@ -69,74 +82,85 @@ html body {
 
   /* Header */
   .header{
-    margin: 0px auto;
-  .adres{
-    text-align: left;
-    background-color: #e4bb7a;
-    padding:10px;
-    padding-left: 10%;
-    padding-right: 10%;
-    width:80%;
-  }
-  .media{
-    float: right;
-  }
-  .pagelogo{
-    position: fixed;
-    background-image: url('../img/Logo.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 50px;
-    width: 100px;
-  }
-  #menuul{
-    display: block;
-  }
-  .navbar{
-    background-color: #262626;
-    color: #ffffff;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top:20px;
-    padding-bottom: 20px;
-    width:80%;
-    height:50px;
-    ul{
-    list-style: none;
-    float:right;
+      margin: 0px auto;
+    .adres{
+      text-align: left;
+      background-color: $motiveColor;
+      padding: { 
+        top: 10px;
+        bottom: 10px;
+        left: 10%;
+        right: 10%;
+      }
+      width:80%;
     }
-    li{
-    display: inline;
-    list-style: none;
-    color:#ffffff;
+    .media{
+      float: right;
     }
-    a{
-    padding-left:50px;
-    text-decoration: none;
-    color:#ffffff;
+    .pagelogo{
+      position: fixed;
+      background: {
+        image: url('../img/Logo.png');
+        repeat: no-repeat;
+        position: center;
+      }
+      height: 50px;
+      width: 100px;
     }
-    a:hover{
-    text-decoration: underline;
+    #menuul{
+      display: block;
     }
-  }
-  .hamburger {
-    position: absolute;
-    visibility: hidden;
-    background-image: url('../img/hamburger.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width:50px;
-    height:50px;
-  }
+    .navbar{
+      background-color: #262626;
+      color: #ffffff;
+      padding: {
+        left: 10%;
+        right: 10%;
+        top:20px;
+        bottom: 20px;
+      }
+      width:80%;
+      height:50px;
+      ul{
+      list-style: none;
+      float:right;
+      }
+      li{
+      display: inline;
+      list-style: none;
+      color:#ffffff;
+      }
+      a{
+      padding-left:50px;
+      text-decoration: none;
+      color:#ffffff;
+      }
+      a:hover{
+      text-decoration: underline;
+      }
+    }
+    .hamburger {
+      position: absolute;
+      visibility: hidden;
+      background: {
+        image: url('../img/hamburger.png');
+        position: center;
+        repeat: no-repeat;
+        size: 100%;
+      }
+      width:50px;
+      height:50px;
+    }
   }
   /* Home */
   .home{
     width:80%;
-    padding-left: 10%;
-    padding-right:10%;
-    padding-top:200px;
-    padding-bottom: 30px;
+    padding: {
+      left: 10%;
+      right:10%;
+      top:200px;
+      bottom: 30px;
+    }
     background-color: #3f3f3f;
     color:#ffffff;
     text-align: center;
@@ -146,12 +170,14 @@ html body {
       margin: 0 auto;
     }
     button{
-      background: #e4bb7a;
+      background: $motiveColor;
       color: #3f3f3f;
-      padding-left:45px;
-      padding-right:45px;
-      padding-top:10px;
-      padding-bottom:10px;
+      padding: {
+        left:45px;
+        right:45px;
+        top:10px;
+        bottom:10px;
+      }
       border: none;
     }
   }
