@@ -1,1 +1,1 @@
-https://kuba1pie.github.io/2-Restaurant/
+Project preview: https://kuba1pie.github.io/2-Restaurant/
