@@ -2,6 +2,9 @@ $(document).ready(function() {
     $('.hamburger').click(function() {
             $('#menuul').slideToggle("fast");
     });
+    if ($(window).width()<1000){
+        document.getElementById("menuul").style.display = "none";
+    }
 });
 
 $( window ).resize(function() {
