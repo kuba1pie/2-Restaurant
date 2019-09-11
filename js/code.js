@@ -5,9 +5,7 @@ $(document).ready(function() {
     if ($(window).width()<1000){
         document.getElementById("menuul").style.display = "none";
         document.getElementById("menuul").style.top = "20px";
-    } else{
-        document.getElementById("logo").style.padding;
-    }
+    } 
 });
 
 $( window ).resize(function() {
