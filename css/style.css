@@ -6,7 +6,7 @@ html body {
   .header {
     width: 100%;
     padding: 0px !important;
-    margin: 0px;
+    margin: 0px; 
     position: absolute; }
 
   .adres {
