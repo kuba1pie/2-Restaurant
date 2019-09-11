@@ -16,6 +16,7 @@ html body {
   }
   .header #menuul {
     display: none;
+    top: 20px;
   }
   .header .navbar ul {
     position: absolute;
@@ -50,6 +51,7 @@ html body {
     background-size: contain;
     width: 200px !important;
     padding-bottom: 20;
+    margin-top: 0;
   }
   .header .hamburger {
     visibility: visible !important;
@@ -92,6 +94,7 @@ html body {
   background-position: center;
   height: 50px;
   width: 100px;
+  margin-top: -20px;
 }
 
 .header #menuul {

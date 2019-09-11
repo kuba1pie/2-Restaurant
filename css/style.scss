@@ -16,6 +16,7 @@ html body {
     }
     #menuul{
       display: none;
+      top:20px;
     }
     .navbar{
       ul{
@@ -64,6 +65,9 @@ html body {
       padding: {
         bottom:20;
       }
+      margin: {
+        top: 0;
+      }
     }
     .hamburger{
       visibility: visible !important;
@@ -107,6 +111,9 @@ html body {
       }
       height: 50px;
       width: 100px;
+      margin: {
+        top: -20px;
+      }
     }
     #menuul{
       display: block;

@@ -4,14 +4,20 @@ $(document).ready(function() {
     });
     if ($(window).width()<1000){
         document.getElementById("menuul").style.display = "none";
+        document.getElementById("menuul").style.top = "20px";
+    } else{
+        document.getElementById("logo").style.padding;
     }
 });
 
 $( window ).resize(function() {
     if ($(window).width()>1000){
         document.getElementById("menuul").style.display = "block";
+        document.getElementById("menuul").style.top = "60px";
+
     } else{
         document.getElementById("menuul").style.display = "none";
+        document.getElementById("menuul").style.top = "20px";
     }
   });
 
