@@ -12,7 +12,7 @@ html body {
       visibility: hidden;
       position: absolute; }
     .header #menuul {
-      display: none; }
+      display: none !important; }
     .header .navbar ul {
       position: absolute;
       background: #3f3f3f;
