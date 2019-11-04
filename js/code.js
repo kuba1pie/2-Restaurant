@@ -1,54 +1,21 @@
-$(document).ready(function() {
-    $('.hamburger').click(function() {
-            $('#menuul').slideToggle("fast");
-    });
-    if ($(window).width()<1000){
-        document.getElementById("menuul").style.display = "none";
-        document.getElementById("menuul").style.top = "20px";
-    } 
-});
-
-$( window ).resize(function() {
-    if ($(window).width()>1000){
-        document.getElementById("menuul").style.display = "block";
-        document.getElementById("menuul").style.top = "60px";
-
-    } else{
-        document.getElementById("menuul").style.display = "none";
-        document.getElementById("menuul").style.top = "20px";
+window.onload = function() {
+    document.getElementById("hamburger").addEventListener("click", hamburger);
+    hamWrapper();
+}
+function hamburger() {
+    let menu = document.getElementById("menu")
+    if (menu.style.display == "block"){
+        menu.style.display = "none"
+        menu.classList.remove("display") 
+    }else {
+        menu.style.display = "block"
+        menu.classList.add("display") 
     }
-  });
-
-var template = '\
-<ul class="flex-container">\
-    {{#names}}\
-    <li class="flex-item">\
-        <div class="squares">\
-            <div class="square3"></div>\
-            <div class="square2"></div>\
-            <div class="square1">\
-                <div class="item camera">\
-                    <img src="{{path}}" class="{{type}}" alt="{{city}} photo">\
-                    <p>{{city}}</p>\
-                </div>\
-            </div>\
-        </div>\
-        </li>\
-    {{/names}}\
-    </ul>'
-
-var data = {
-    "Subject": "",
-    "names": [
-        {"city": "Warsaw", "path": "img/imgWarsaw.jpg", "type": "photo"},
-        {"city": "Paris", "path": "img/img2.jpg", "type": "photo"},
-        {"city": "Rio", "path": "img/img3.jpg", "type": "photo"},
-        {"city": "London", "path": "img/img.png", "type": "blank"},
-        {"city": "Rome", "path": "img/img.png", "type": "blank"},
-        {"city": "Venice", "path": "img/img.png", "type": "blank"}
-    ]
-};
-
-var box=document.getElementById("templateMoustache");
-var html = Mustache.to_html(template, data);
-box.innerHTML=html;
+}
+function hamWrapper(){
+    let el = document.getElementById("hamWrapper")
+    let para = document.createElement("div");               // Create a <p> element
+    para.classList.add("hamItem", "right")
+    para.innerHTML = "<h4>Hamburger</h4><h5>Big and Meaty</h5><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac feugiat sapien, a dapibus lacus.</p><span class='price'>$34.00</span><img src='img/burger1.png' alt='burger'>";               // Insert text
+    el.appendChild(para);                      // Append <p> to <body> 
+}

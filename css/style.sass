@@ -1,0 +1,297 @@
+$topColor: #262626
+$dark: #3f3f3f
+$bright: #fdfeff 
+$pinkt: #cdcdcd
+$yellow: #e4bb7a
+$padding: 2em
+@import 'mixin'
+
+html body
+    font-family: "Lucida Sans", sans-serif
+    margin: 0 auto
+header
+    display: grid
+    grid-template-rows: auto auto
+    grid-template-columns: 10% 20% 60% 10%
+    padding: 0px
+    margin: 0px
+    background-color: $topColor
+    .adres
+        grid-column: 1/5
+        grid-row: 1
+        background-color: #e4bb7a
+        padding: 5px 10%
+    .media
+        float: right
+    .menu
+        grid-column: 3/4
+        grid-row: 2
+        .navbar
+            display: flex
+            justify-content: space-between
+            color: #ffffff
+            margin: 14px
+            height: 100%
+            a
+                padding: 5x 20px
+                text-transform: uppercase
+                color: #ffffff
+                &:link
+                    text-decoration: none
+                &:hover
+                    text-decoration: underline
+    .display
+        position: absolute
+        width: 100%
+        min-height: calc(100vh - 50px)
+        top: 50px
+        left: 0px
+        background-color: #262626
+        .navbar
+            flex-direction: column
+            a
+                padding: 1.5em
+                font-size: 1.3em
+                text-align: center
+                align-content: center
+                &:hover
+                    background-color: #c2c2c2
+                    color: #262626
+                    text-decoration: underline
+    .logo
+        grid-column: 2/3
+        grid-row: 2
+        background:
+            image: url("../img/Logo.png")
+            repeat: no-repeat
+            position: center
+        height: 50px
+        width: 100px
+    .hamburger
+        visibility: hidden
+main
+    .home
+        background-color: $dark
+        color: #ffffff
+        text-align: center
+        //height: calc(100vh - 80px)
+        padding: 25vh 5% 50px 5%
+        img
+            max-width: 400px
+            display: block
+            margin: 0 auto
+        button
+            @include button
+            display: block
+            margin: 0 auto
+            background: #e4bb7a
+            color: #3f3f3f
+    .midNav
+        background-color: $bright
+        min-height: 100px
+        img
+            display: block
+            margin: 1em auto 0px auto
+        .midNavigation
+            display: flex
+            margin: 1em auto
+            width: 50%
+            justify-content: space-around
+            a
+                padding: 1em 2em
+                font-size: 1.2em
+                text-decoration: none
+                color: #000000
+    .rec
+        background-color: $dark
+        color: white
+        padding: 5em 50% 5em 20%
+        h2
+            color: $yellow
+        h3
+            text-transform: uppercase
+        p
+            max-width: 500px
+            text-align: justify
+        button
+            @include button
+            color: $dark
+            background-color: $yellow
+    .midMedia
+        background-color: $bright
+        img
+            display: block
+            margin: 2em auto
+    .food
+        background-color: $pinkt
+        padding-bottom: 2em
+        .foodnav
+            display: flex
+            justify-content: space-between
+            width: 600px
+            margin: 0 auto
+            text-transform: uppercase
+            align-items: flex-end
+            padding: 2em
+            a:link
+                text-decoration: none
+                &:hover
+                    border: 0px 0px 4px 0px solid $yellow
+        .organicInfo
+            width: 600px
+            marign: 2em auto
+            display: block
+            background-color: $bright
+            border: 1px solid black 
+            outline: $bright solid 1em
+            margin: 2em auto
+            text-align: center
+            p
+                max-width: 80%
+                margin: 1em auto
+            button
+                @include button
+                background-color: $bright
+                margin: 0 auto
+                box-shadow: none
+                border: solid 1px $dark
+                &:hover
+                    background-color: #dddddd
+    .about
+        background-color: $dark
+        color: white
+        padding: 2em 40% 2em 20%
+        h2
+            color: $yellow
+        button
+            @include button
+            &:hover
+                background-color: #dddddd
+    .quote
+        background-color: $topColor
+        color: white
+        text-align: center
+        padding: 2em
+        font-size: 25px
+        .wild
+            color: $yellow
+    .hamMenu
+        @include header
+        padding: $padding 
+        background-color: $bright
+        .hamItem
+            border: 1px solid $yellow
+            padding: 1em
+            text-align: left
+            max-width: 500px
+            height: 300px
+            margin: 0 auto
+            h4
+                text-transform: uppercase
+            h5
+                color: $yellow
+            p
+                width: 250px
+            .price
+                font:
+                    size: 25px
+                    weight: bold
+                position: relative 
+                top: -100px
+            img
+                position: relative 
+                
+                top: -120px
+        .right
+            h4
+                margin-left: 50px
+            h5
+                margin-left: 50px
+            p
+                margin-left: 50px
+            .price
+                margin-left: 50px
+            img
+                left: 280px
+        .right
+            h4
+                margin-left: 50px
+            h5
+                margin-left: 50px
+            p
+                margin-left: 50px
+            .price
+                margin-left: 50px
+            img
+                left: 280px
+    .opening
+        @include header
+        display: grid
+        grid-template-columns: 50% 50%
+        grid-template-rows: auto auto
+        padding: $padding 10%
+        background-color: $topColor
+        color: $bright
+        .title
+            grid-column: 1/3
+            grid-row: 1
+            padding: $padding
+        .photo
+            grid-column: 1
+            grid-row: 2
+            background:
+                image: url('../img/opening.png')
+                size: cover
+                position: center
+                repeat: no-repeat
+        .openingContent
+            grid-column: 2
+            grid-row: 2
+            background:
+                image: url('../img/openingBG.png')
+                size: cover
+                repeat: no-repeat
+            color: $topColor
+            padding: 2em
+            .border
+                border: 1px solid $topColor
+                width: 90%
+                margin: 2em auto
+                    top: 5em
+                padding: 2em
+                background-image: radial-gradient(white 30%, rgba(255,0,0,0)) 
+    .team
+        @include header
+        padding: $padding
+        background-color: $dark
+        color: $bright
+    .reservation
+        @include header
+        padding: $padding
+        background-color: $topColor
+        color: $bright
+        button
+            @inlucde button
+    .opinions
+        @include header
+        padding: $padding 
+        background-color: $bright
+    .newsletter
+        @include header
+        padding: $padding 
+        background-color: $pinkt
+        text-transform: uppercase
+        font-weight: bold
+        button
+            @inlucde button
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px)
+    @import 'mobile.sass'
