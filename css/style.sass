@@ -5,9 +5,12 @@ $pinkt: #cdcdcd
 $yellow: #e4bb7a
 $padding: 2em
 @import 'mixin'
-
+@import url('https://fonts.googleapis.com/css?ily=Average|Average+Sans|Montserrat&display=swap')
+@font-face
+    font-family: WildYoth
+    src: url("WildYouth.otf") format("opentype")
 html body
-    font-family: "Lucida Sans", sans-serif
+    font-family: "Average Sans", sans-serif
     margin: 0 auto
 header
     display: grid
@@ -31,9 +34,11 @@ header
             justify-content: space-between
             color: #ffffff
             margin: 14px
-            height: 100%
+            font:
+                family: 'Montserrat'
+                size: 15px
+                line-height: 30px
             a
-                padding: 5x 20px
                 text-transform: uppercase
                 color: #ffffff
                 &:link
@@ -50,7 +55,6 @@ header
         .navbar
             flex-direction: column
             a
-                padding: 1.5em
                 font-size: 1.3em
                 text-align: center
                 align-content: center
@@ -74,8 +78,18 @@ main
         background-color: $dark
         color: #ffffff
         text-align: center
-        //height: calc(100vh - 80px)
-        padding: 25vh 5% 50px 5%
+        padding: 20vh 5% 10vh 5%
+        h1
+            font:
+                size: 76px
+        h2
+            font:
+                family: 'WildYoth'            
+                size: 50px
+            color: $yellow
+        h4
+            font:
+                size: 16px
         img
             max-width: 400px
             display: block
@@ -88,28 +102,38 @@ main
             color: #3f3f3f
     .midNav
         background-color: $bright
-        min-height: 100px
         img
             display: block
             margin: 1em auto 0px auto
         .midNavigation
             display: flex
-            margin: 1em auto
-            width: 50%
+            margin: 0 auto
+            width: 80%
+            padding: 2em 0
             justify-content: space-around
+            font:
+                family: 'Montserrat'
+                size: 15px
+                line-height: 30px
+            text-transform: uppercase
             a
-                padding: 1em 2em
-                font-size: 1.2em
-                text-decoration: none
                 color: #000000
+                &:link
+                    text-decoration: none
+                &:hover
+                    text-decoration: underline
     .rec
         background-color: $dark
         color: white
         padding: 5em 50% 5em 20%
         h2
             color: $yellow
+            font-family: 'WildYoth'
         h3
             text-transform: uppercase
+            font:
+                family: 'Montserrat'
+                size: 16px
         p
             max-width: 500px
             text-align: justify
@@ -127,16 +151,23 @@ main
         padding-bottom: 2em
         .foodnav
             display: flex
-            justify-content: space-between
-            width: 600px
+            width: 80%
+            justify-content: space-around
             margin: 0 auto
             text-transform: uppercase
             align-items: flex-end
-            padding: 2em
-            a:link
-                text-decoration: none
+            padding: 2em 0
+            font:
+                family: 'Montserrat'
+                size: 15px
+                line-height: 30px
+            a
+                font-size: 16px
+                color: #000000
+                &:link
+                    text-decoration: none
                 &:hover
-                    border: 0px 0px 4px 0px solid $yellow
+                    text-decoration: underline
         .organicInfo
             width: 600px
             marign: 2em auto
@@ -163,6 +194,12 @@ main
         padding: 2em 40% 2em 20%
         h2
             color: $yellow
+            font-family: 'WildYoth'
+        h3
+            text-transform: uppercase
+            font:
+                family: 'Montserrat'
+                size: 16px
         button
             @include button
             &:hover
@@ -172,9 +209,12 @@ main
         color: white
         text-align: center
         padding: 2em
-        font-size: 25px
+        font:
+            size: 25px
+            family: 'Average'
         .wild
             color: $yellow
+            font-family: 'WildYoth'
     .hamMenu
         @include header
         padding: $padding 
@@ -188,13 +228,17 @@ main
             margin: 0 auto
             h4
                 text-transform: uppercase
+                font-size: 16px
+                font-family: 'Montserrat'
             h5
                 color: $yellow
+                font-size: 14px
             p
                 width: 250px
             .price
                 font:
-                    size: 25px
+                    size: 24px
+                    family: 'Montserrat'
                     weight: bold
                 position: relative 
                 top: -100px
@@ -213,7 +257,7 @@ main
                 margin-left: 50px
             img
                 left: 280px
-        .right
+        .left
             h4
                 margin-left: 50px
             h5
@@ -255,7 +299,6 @@ main
             padding: 2em
             .border
                 border: 1px solid $topColor
-                width: 90%
                 margin: 2em auto
                     top: 5em
                 padding: 2em
@@ -271,7 +314,11 @@ main
         background-color: $topColor
         color: $bright
         button
-            @inlucde button
+            @include button
+            margin: 1em auto
+            box-shadow: 0px 0px 5px 5px #111111
+            &:hover
+                background-color: $yellow
     .opinions
         @include header
         padding: $padding 
@@ -281,9 +328,16 @@ main
         padding: $padding 
         background-color: $pinkt
         text-transform: uppercase
-        font-weight: bold
+        font:
+            family: 'Montserrat'
+            size: 18px
+            weight: bold
         button
-            @inlucde button
+            @include button
+            margin: 1em auto
+            box-shadow: 0px 0px 5px 5px #dddddd
+            &:hover
+                background-color: $yellow
 
 
 

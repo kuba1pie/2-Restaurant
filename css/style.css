@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css?ily=Average|Average+Sans|Montserrat&display=swap");
+@font-face {
+  font-family: WildYoth;
+  src: url("WildYouth.otf") format("opentype"); }
 html body {
-  font-family: "Lucida Sans", sans-serif;
+  font-family: "Average Sans", sans-serif;
   margin: 0 auto; }
 
 header {
@@ -24,9 +28,10 @@ header {
       justify-content: space-between;
       color: #ffffff;
       margin: 14px;
-      height: 100%; }
+      font-family: "Montserrat";
+      font-size: 15px;
+      font-line-height: 30px; }
       header .menu .navbar a {
-        padding: 5x 20px;
         text-transform: uppercase;
         color: #ffffff; }
         header .menu .navbar a:link {
@@ -43,7 +48,6 @@ header {
     header .display .navbar {
       flex-direction: column; }
       header .display .navbar a {
-        padding: 1.5em;
         font-size: 1.3em;
         text-align: center;
         align-content: center; }
@@ -66,7 +70,15 @@ main .home {
   background-color: #3f3f3f;
   color: #ffffff;
   text-align: center;
-  padding: 25vh 5% 50px 5%; }
+  padding: 20vh 5% 10vh 5%; }
+  main .home h1 {
+    font-size: 76px; }
+  main .home h2 {
+    font-family: "WildYoth";
+    font-size: 50px;
+    color: #e4bb7a; }
+  main .home h4 {
+    font-size: 16px; }
   main .home img {
     max-width: 400px;
     display: block;
@@ -75,7 +87,8 @@ main .home {
     display: block;
     padding: 10px 45px;
     border: none;
-    font-size: 1.5em;
+    font-family: "Montserrat";
+    font-size: 15px;
     box-shadow: 0px 0px 10px 10px #383838;
     text-transform: uppercase;
     display: block;
@@ -85,29 +98,37 @@ main .home {
     main .home button:hover {
       background-color: #a17b3d; }
 main .midNav {
-  background-color: #fdfeff;
-  min-height: 100px; }
+  background-color: #fdfeff; }
   main .midNav img {
     display: block;
     margin: 1em auto 0px auto; }
   main .midNav .midNavigation {
     display: flex;
-    margin: 1em auto;
-    width: 50%;
-    justify-content: space-around; }
+    margin: 0 auto;
+    width: 80%;
+    padding: 2em 0;
+    justify-content: space-around;
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-line-height: 30px;
+    text-transform: uppercase; }
     main .midNav .midNavigation a {
-      padding: 1em 2em;
-      font-size: 1.2em;
-      text-decoration: none;
       color: #000000; }
+      main .midNav .midNavigation a:link {
+        text-decoration: none; }
+      main .midNav .midNavigation a:hover {
+        text-decoration: underline; }
 main .rec {
   background-color: #3f3f3f;
   color: white;
   padding: 5em 50% 5em 20%; }
   main .rec h2 {
-    color: #e4bb7a; }
+    color: #e4bb7a;
+    font-family: "WildYoth"; }
   main .rec h3 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-size: 16px; }
   main .rec p {
     max-width: 500px;
     text-align: justify; }
@@ -115,7 +136,8 @@ main .rec {
     display: block;
     padding: 10px 45px;
     border: none;
-    font-size: 1.5em;
+    font-family: "Montserrat";
+    font-size: 15px;
     box-shadow: 0px 0px 10px 10px #383838;
     text-transform: uppercase;
     color: #3f3f3f;
@@ -132,16 +154,22 @@ main .food {
   padding-bottom: 2em; }
   main .food .foodnav {
     display: flex;
-    justify-content: space-between;
-    width: 600px;
+    width: 80%;
+    justify-content: space-around;
     margin: 0 auto;
     text-transform: uppercase;
     align-items: flex-end;
-    padding: 2em; }
-    main .food .foodnav a:link {
-      text-decoration: none; }
-      main .food .foodnav a:link:hover {
-        border: 0px 0px 4px 0px solid #e4bb7a; }
+    padding: 2em 0;
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-line-height: 30px; }
+    main .food .foodnav a {
+      font-size: 16px;
+      color: #000000; }
+      main .food .foodnav a:link {
+        text-decoration: none; }
+      main .food .foodnav a:hover {
+        text-decoration: underline; }
   main .food .organicInfo {
     width: 600px;
     marign: 2em auto;
@@ -158,7 +186,8 @@ main .food {
       display: block;
       padding: 10px 45px;
       border: none;
-      font-size: 1.5em;
+      font-family: "Montserrat";
+      font-size: 15px;
       box-shadow: 0px 0px 10px 10px #383838;
       text-transform: uppercase;
       background-color: #fdfeff;
@@ -174,12 +203,18 @@ main .about {
   color: white;
   padding: 2em 40% 2em 20%; }
   main .about h2 {
-    color: #e4bb7a; }
+    color: #e4bb7a;
+    font-family: "WildYoth"; }
+  main .about h3 {
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-size: 16px; }
   main .about button {
     display: block;
     padding: 10px 45px;
     border: none;
-    font-size: 1.5em;
+    font-family: "Montserrat";
+    font-size: 15px;
     box-shadow: 0px 0px 10px 10px #383838;
     text-transform: uppercase; }
     main .about button:hover {
@@ -191,19 +226,26 @@ main .quote {
   color: white;
   text-align: center;
   padding: 2em;
-  font-size: 25px; }
+  font-size: 25px;
+  font-family: "Average"; }
   main .quote .wild {
-    color: #e4bb7a; }
+    color: #e4bb7a;
+    font-family: "WildYoth"; }
 main .hamMenu {
   text-align: center;
   padding: 2em;
   background-color: #fdfeff; }
   main .hamMenu h2 {
     text-transform: uppercase;
-    margin: 0px; }
+    margin: 0px;
+    font-family: "Montserrat";
+    font-size: 36px;
+    letter-spacing: 3px; }
   main .hamMenu h3 {
     margin: 0px;
-    color: #e4bb7a; }
+    color: #e4bb7a;
+    font-family: "WildYoth";
+    font-size: 45px; }
   main .hamMenu .hamItem {
     border: 1px solid #e4bb7a;
     padding: 1em;
@@ -212,13 +254,17 @@ main .hamMenu {
     height: 300px;
     margin: 0 auto; }
     main .hamMenu .hamItem h4 {
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-size: 16px;
+      font-family: "Montserrat"; }
     main .hamMenu .hamItem h5 {
-      color: #e4bb7a; }
+      color: #e4bb7a;
+      font-size: 14px; }
     main .hamMenu .hamItem p {
       width: 250px; }
     main .hamMenu .hamItem .price {
-      font-size: 25px;
+      font-size: 24px;
+      font-family: "Montserrat";
       font-weight: bold;
       position: relative;
       top: -100px; }
@@ -235,15 +281,15 @@ main .hamMenu {
     margin-left: 50px; }
   main .hamMenu .right img {
     left: 280px; }
-  main .hamMenu .right h4 {
+  main .hamMenu .left h4 {
     margin-left: 50px; }
-  main .hamMenu .right h5 {
+  main .hamMenu .left h5 {
     margin-left: 50px; }
-  main .hamMenu .right p {
+  main .hamMenu .left p {
     margin-left: 50px; }
-  main .hamMenu .right .price {
+  main .hamMenu .left .price {
     margin-left: 50px; }
-  main .hamMenu .right img {
+  main .hamMenu .left img {
     left: 280px; }
 main .opening {
   text-align: center;
@@ -255,10 +301,15 @@ main .opening {
   color: #fdfeff; }
   main .opening h2 {
     text-transform: uppercase;
-    margin: 0px; }
+    margin: 0px;
+    font-family: "Montserrat";
+    font-size: 36px;
+    letter-spacing: 3px; }
   main .opening h3 {
     margin: 0px;
-    color: #e4bb7a; }
+    color: #e4bb7a;
+    font-family: "WildYoth";
+    font-size: 45px; }
   main .opening .title {
     grid-column: 1/3;
     grid-row: 1;
@@ -280,7 +331,6 @@ main .opening {
     padding: 2em; }
     main .opening .openingContent .border {
       border: 1px solid #262626;
-      width: 90%;
       margin: 2em auto;
         margin-top: 5em;
       padding: 2em;
@@ -292,10 +342,15 @@ main .team {
   color: #fdfeff; }
   main .team h2 {
     text-transform: uppercase;
-    margin: 0px; }
+    margin: 0px;
+    font-family: "Montserrat";
+    font-size: 36px;
+    letter-spacing: 3px; }
   main .team h3 {
     margin: 0px;
-    color: #e4bb7a; }
+    color: #e4bb7a;
+    font-family: "WildYoth";
+    font-size: 45px; }
 main .reservation {
   text-align: center;
   padding: 2em;
@@ -303,36 +358,77 @@ main .reservation {
   color: #fdfeff; }
   main .reservation h2 {
     text-transform: uppercase;
-    margin: 0px; }
+    margin: 0px;
+    font-family: "Montserrat";
+    font-size: 36px;
+    letter-spacing: 3px; }
   main .reservation h3 {
     margin: 0px;
-    color: #e4bb7a; }
+    color: #e4bb7a;
+    font-family: "WildYoth";
+    font-size: 45px; }
   main .reservation button {
-    @inlucde button; }
+    display: block;
+    padding: 10px 45px;
+    border: none;
+    font-family: "Montserrat";
+    font-size: 15px;
+    box-shadow: 0px 0px 10px 10px #383838;
+    text-transform: uppercase;
+    margin: 1em auto;
+    box-shadow: 0px 0px 5px 5px #111111; }
+    main .reservation button:hover {
+      background-color: #a17b3d; }
+    main .reservation button:hover {
+      background-color: #e4bb7a; }
 main .opinions {
   text-align: center;
   padding: 2em;
   background-color: #fdfeff; }
   main .opinions h2 {
     text-transform: uppercase;
-    margin: 0px; }
+    margin: 0px;
+    font-family: "Montserrat";
+    font-size: 36px;
+    letter-spacing: 3px; }
   main .opinions h3 {
     margin: 0px;
-    color: #e4bb7a; }
+    color: #e4bb7a;
+    font-family: "WildYoth";
+    font-size: 45px; }
 main .newsletter {
   text-align: center;
   padding: 2em;
   background-color: #cdcdcd;
   text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 18px;
   font-weight: bold; }
   main .newsletter h2 {
     text-transform: uppercase;
-    margin: 0px; }
+    margin: 0px;
+    font-family: "Montserrat";
+    font-size: 36px;
+    letter-spacing: 3px; }
   main .newsletter h3 {
     margin: 0px;
-    color: #e4bb7a; }
+    color: #e4bb7a;
+    font-family: "WildYoth";
+    font-size: 45px; }
   main .newsletter button {
-    @inlucde button; }
+    display: block;
+    padding: 10px 45px;
+    border: none;
+    font-family: "Montserrat";
+    font-size: 15px;
+    box-shadow: 0px 0px 10px 10px #383838;
+    text-transform: uppercase;
+    margin: 1em auto;
+    box-shadow: 0px 0px 5px 5px #dddddd; }
+    main .newsletter button:hover {
+      background-color: #a17b3d; }
+    main .newsletter button:hover {
+      background-color: #e4bb7a; }
 
 @media only screen and (max-width: 1000px) {
   header {
