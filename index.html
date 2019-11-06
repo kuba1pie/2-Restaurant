@@ -11,10 +11,10 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 	<body>
-		<header>
+		<header id="home">
 			<div class="adres">
 				<img src="img/adress.png">
-				New Scotland Yard, 8-10 Broadway, Westminster, London SW1H 0BG Bla Bla
+				<p>New Scotland Yard, 8-10 Broadway, Westminster, London SW1H 0BG</p>
 				<span class="media"><img src="img/media.png"></span>
 			</div>
 			<div class="logo"></div>
@@ -23,24 +23,24 @@
 			</div>
 			<div class="menu" id="menu">
 				<nav class="navbar">
-					<a href="/">Home</a>
+					<a href="#home">Home</a>
 					<a href="/">Reservations</a>
 					<a href="/">Menu</a>
 					<a href="/">Blog</a>
 					<a href="/">Features</a>
-					<a href="/">Contact</a>
+					<a href="#contact">Contact</a>
 				</nav>
 			</div>
-		</header>
-		<main>
-			<section class="home">
+			<div class="home">
 				<h2>Welcome to</h2>
 				<h1>Steakville Restaurant</h1>
 				<h4>New Scotland Yard, 8-10 Broadway, Westminster, London SW1H 0BG</h4>
 				<img src="img/Arrow.png" style="padding:40px;">
 				<button>Menu</button>
 				<img src="img/bell.png" style="padding-top:40px;">
-			</section>
+			</div>
+		</header>
+		<main>
 			<section class="midNav">
 				<img src="img/logoname.png" alt="Steakville">
 				<div class="midNavigation">
@@ -74,6 +74,7 @@
 					<a href="/">Contact</a>
 				</div>
 				<div class="organicInfo">
+					<h3>Natural life</h3>
 					<h2>Organic Food</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -94,7 +95,7 @@
 				</p>
 				<span class="wild">Orson Welles</span>
 			</section>
-			<section class="hamMenu">
+			<section class="hamMenu" id="hamburger">
 					<h3>Our Dishes</h3>
 					<h2>Menu</h2>
 				<div class="hamWrapper" id="hamWrapper"></div>

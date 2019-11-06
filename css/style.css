@@ -11,7 +11,7 @@ html body {
 
 header {
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: 30px 50px calc(100vh-80px);
   grid-template-columns: 10% 20% 60% 10%;
   padding: 0px;
   margin: 0px;
@@ -19,10 +19,14 @@ header {
   header .adres {
     grid-column: 1/5;
     grid-row: 1;
-    background-color: #e4bb7a;
-    padding: 5px 10%; }
+    display: flex;
+    background-color: #e4bb7a; }
+    header .adres img {
+      margin: auto auto auto 10%; }
+    header .adres p {
+      margin: auto auto auto 1em; }
   header .media {
-    float: right; }
+    margin: auto 10% auto auto; }
   header .menu {
     grid-column: 3/4;
     grid-row: 2; }
@@ -68,7 +72,46 @@ header {
     width: 100px; }
   header .hamburger {
     visibility: hidden; }
+  header .home {
+    background-color: #3f3f3f;
+    grid-row: 3;
+    grid-column: 1/5;
+    color: #ffffff;
+    text-align: center; }
+    header .home h1 {
+      font-size: 76px; }
+    header .home h2 {
+      font-family: "WildYoth";
+      font-size: 50px;
+      color: #e4bb7a; }
+    header .home h4 {
+      font-size: 16px; }
+    header .home img {
+      max-width: 400px;
+      display: block;
+      margin: 0 auto; }
+    header .home button {
+      display: block;
+      padding: 10px 45px;
+      border: none;
+      font-family: "Montserrat";
+      font-size: 15px;
+      text-transform: uppercase;
+      display: block;
+      margin: 0 auto;
+      background: #e4bb7a;
+      color: #3f3f3f; }
+      header .home button:hover {
+        background-color: #a17b3d; }
+    header .home p {
+      padding: 1.5em 0;
+      max-width: 600px;
+      text-align: left; }
 
+main p {
+  padding: 1.5em 0;
+  max-width: 600px;
+  text-align: left; }
 main .home {
   background-color: #3f3f3f;
   color: #ffffff;
@@ -131,9 +174,6 @@ main .rec {
     text-transform: uppercase;
     font-family: "Montserrat";
     font-size: 16px; }
-  main .rec p {
-    max-width: 500px;
-    text-align: justify; }
   main .rec button {
     display: block;
     padding: 10px 45px;
@@ -172,17 +212,31 @@ main .food {
       main .food .foodnav a:hover {
         text-decoration: underline; }
   main .food .organicInfo {
-    width: 600px;
-    marign: 2em auto;
+    max-width: 600px;
     display: block;
+    margin: 2em auto;
+    padding: 2em;
     background-color: #fdfeff;
     border: 1px solid black;
     outline: #fdfeff solid 1em;
-    margin: 2em auto;
+    marign: 2em auto;
+    text-align: center;
     text-align: center; }
+    main .food .organicInfo h2 {
+      text-transform: uppercase;
+      margin: 0px;
+      font-family: "Montserrat";
+      font-size: 36px;
+      letter-spacing: 3px; }
+    main .food .organicInfo h3 {
+      margin: 0px;
+      color: #e4bb7a;
+      font-family: "WildYoth";
+      font-size: 45px; }
     main .food .organicInfo p {
       max-width: 80%;
-      margin: 1em auto; }
+      margin: 1em auto;
+      text-align: center; }
     main .food .organicInfo button {
       display: block;
       padding: 10px 45px;
@@ -230,6 +284,10 @@ main .quote {
   main .quote .wild {
     color: #e4bb7a;
     font-family: "WildYoth"; }
+  main .quote p {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 95%; }
 main .hamMenu {
   text-align: center;
   padding: 2em;
@@ -514,7 +572,8 @@ main .newsletter {
     font-size: 45px; }
   main .newsletter p {
     grid-row: 1;
-    grid-column: 1/3; }
+    grid-column: 1/3;
+    margin: 0 auto; }
   main .newsletter button {
     display: block;
     padding: 10px 45px;
@@ -564,6 +623,51 @@ main .newsletter {
       background-repeat: no-repeat;
       background-size: 100%;
       width: 3em;
-      height: 3em; } }
+      height: 3em; }
+
+  main .midNav {
+    display: none; }
+  main .midMedia {
+    display: none; }
+  main .quote {
+    display: none; }
+  main .food {
+    margin: 0; }
+    main .food .foodnav {
+      display: none; }
+    main .food .organicInfo {
+      outline: none;
+      border: none;
+      background-color: #cdcdcd;
+      margin: 0px auto; }
+  main .hamMenu .hamItem {
+    text-align: center;
+    height: auto;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 2em; }
+    main .hamMenu .hamItem h4 {
+      margin: 0 auto;
+      padding: 1em; }
+    main .hamMenu .hamItem h5 {
+      margin: 0 auto; }
+    main .hamMenu .hamItem .price {
+      margin: 0 auto;
+      position: initial; }
+    main .hamMenu .hamItem p {
+      width: 80%;
+      text-align: center;
+      margin: 0 auto; }
+    main .hamMenu .hamItem img {
+      display: block;
+      margin: 0 auto;
+      position: initial;
+      padding: 1em; }
+  main .reservation2 {
+    display: none; }
+  main .opening {
+    grid-template-columns: 0px auto; }
+  main .opinions {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

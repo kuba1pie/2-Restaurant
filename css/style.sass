@@ -17,7 +17,7 @@ html body
     margin: 0 auto
 header
     display: grid
-    grid-template-rows: auto auto
+    grid-template-rows: 30px 50px calc(100vh-80px)
     grid-template-columns: 10% 20% 60% 10%
     padding: 0px
     margin: 0px
@@ -25,10 +25,14 @@ header
     .adres
         grid-column: 1/5
         grid-row: 1
+        display: flex
         background-color: #e4bb7a
-        padding: 5px 10%
+        img
+            margin: auto auto auto 10%
+        p
+            margin: auto auto auto 1em
     .media
-        float: right
+        margin: auto 10% auto auto
     .menu
         grid-column: 3/4
         grid-row: 2
@@ -76,7 +80,42 @@ header
         width: 100px
     .hamburger
         visibility: hidden
+    .home
+        background-color: $dark
+        grid-row: 3
+        grid-column: 1/5
+        color: #ffffff
+        text-align: center
+        h1
+            font:
+                size: 76px
+        h2
+            font:
+                family: 'WildYoth'            
+                size: 50px
+            color: $yellow
+        h4
+            font:
+                size: 16px
+        img
+            max-width: 400px
+            display: block
+            margin: 0 auto
+        button
+            @include button
+            display: block
+            margin: 0 auto
+            background: #e4bb7a
+            color: #3f3f3f
+        p
+            padding: 1.5em 0
+            max-width: 600px
+            text-align: left
 main
+    p
+        padding: 1.5em 0
+        max-width: 600px
+        text-align: left
     .home
         background-color: $dark
         color: #ffffff
@@ -137,9 +176,6 @@ main
             font:
                 family: 'Montserrat'
                 size: 16px
-        p
-            max-width: 500px
-            text-align: justify
         button
             @include button
             color: $dark
@@ -172,17 +208,20 @@ main
                 &:hover
                     text-decoration: underline
         .organicInfo
-            width: 600px
-            marign: 2em auto
+            max-width: 600px
             display: block
+            margin: 2em auto
+            padding: $padding
             background-color: $bright
             border: 1px solid black 
             outline: $bright solid 1em
-            margin: 2em auto
+            marign: 2em auto
             text-align: center
+            @include header
             p
                 max-width: 80%
                 margin: 1em auto
+                text-align: center
             button
                 @include button
                 background-color: $bright
@@ -218,6 +257,10 @@ main
         .wild
             color: $yellow
             font-family: 'WildYoth'
+        p
+            margin: 0 auto
+            text-align: center
+            max-width: 95%
     .hamMenu
         @include header
         padding: $padding 
@@ -425,6 +468,7 @@ main
         p
             grid-row: 1
             grid-column: 1/3
+            margin: 0 auto
         button
             @include button
             grid-row: 2
