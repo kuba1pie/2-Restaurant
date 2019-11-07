@@ -1,0 +1,28 @@
+{
+    "burgers": [
+        {
+            "name": "Hamburger",
+            "cla": "right",
+            "title": "Big and Meaty",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac feugiat sapien, a dapibus lacus.",
+            "photo": "burger1.png",
+            "price": "14.00"
+        },
+        {
+            "name": "Cheeseburger",
+            "cla": "right",
+            "title": "Big and Meaty",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac feugiat sapien, a dapibus lacus.",
+            "photo": "burger1.png",
+            "price": "14.00"
+        },
+        {
+            "name": "Hamburger",
+            "cla": "right",
+            "title": "Big and Meaty",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac feugiat sapien, a dapibus lacus.",
+            "photo": "burger1.png",
+            "price": "14.00"
+        }
+    ]
+}

@@ -5,11 +5,13 @@
 @font-face {
   font-family: Minion;
   src: url("Minion.ttf") format("opentype"); }
-html body {
-  font-family: "Average Sans", sans-serif;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column; }
+html {
+  scroll-behavior: smooth; }
+  html body {
+    font-family: "Average Sans", sans-serif;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; }
 
 header {
   display: grid;
@@ -23,9 +25,10 @@ header {
     grid-column: 1/5;
     grid-row: 1;
     display: flex;
+    justify-content: flex-start;
     background-color: #e4bb7a; }
     header .adres img {
-      margin: auto auto auto 10%; }
+      margin: auto 0 auto 10%; }
     header .adres p {
       margin: auto auto auto 1em; }
   header .media {
@@ -51,16 +54,17 @@ header {
   header .display {
     position: absolute;
     width: 100%;
-    min-height: calc(100vh - 50px);
     top: 50px;
     left: 0px;
     background-color: #262626; }
     header .display .navbar {
-      flex-direction: column; }
+      flex-direction: column;
+      justify-content: space-around;
+      height: calc(100vh - 50px); }
       header .display .navbar a {
         font-size: 1.3em;
         text-align: center;
-        align-content: center; }
+        padding: 1em; }
         header .display .navbar a:hover {
           background-color: #c2c2c2;
           color: #262626;
@@ -176,7 +180,7 @@ main .midNav {
 main .rec {
   background-color: #3f3f3f;
   color: white;
-  padding: 5em 50% 5em 20%;
+  padding: 3em;
   text-align: center; }
   main .rec h2 {
     text-transform: uppercase;
@@ -197,11 +201,13 @@ main .rec {
     font-size: 15px;
     text-transform: uppercase;
     color: #3f3f3f;
+    margin: 0 auto;
     background-color: #e4bb7a; }
     main .rec button:hover {
       background-color: #a17b3d; }
 main .midMedia {
-  background-color: #fdfeff; }
+  background-color: #fdfeff;
+  padding: 0em; }
   main .midMedia img {
     display: block;
     margin: 2em auto; }
@@ -324,51 +330,54 @@ main .hamMenu {
     color: #e4bb7a;
     font-family: "WildYoth";
     font-size: 45px; }
+  main .hamMenu .hamWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin: 0 auto; }
   main .hamMenu .hamItem {
     border: 1px solid #e4bb7a;
     padding: 1em;
-    text-align: left;
-    max-width: 500px;
-    height: 300px;
-    margin: 0 auto; }
-    main .hamMenu .hamItem h4 {
-      text-transform: uppercase;
-      font-size: 16px;
-      font-family: "Montserrat"; }
-    main .hamMenu .hamItem h5 {
-      color: #e4bb7a;
-      font-size: 14px; }
-    main .hamMenu .hamItem p {
-      width: 250px; }
+    width: 40%;
+    min-width: 250px;
+    margin: 1em auto;
+    display: grid;
+    grid-template-columns: 50% 50%; }
+    main .hamMenu .hamItem .text {
+      grird-row: 1;
+      margin: auto; }
+      main .hamMenu .hamItem .text h4 {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: "Montserrat"; }
+      main .hamMenu .hamItem .text h5 {
+        color: #e4bb7a;
+        font-size: 16px; }
+      main .hamMenu .hamItem .text p {
+        max-width: 200px;
+        margin: auto; }
     main .hamMenu .hamItem .price {
       font-size: 24px;
       font-family: "Montserrat";
       font-weight: bold;
-      position: relative;
-      top: -100px; }
+      margin: 2em; }
     main .hamMenu .hamItem img {
-      position: relative;
-      top: -120px; }
-  main .hamMenu .right h4 {
-    margin-left: 50px; }
-  main .hamMenu .right h5 {
-    margin-left: 50px; }
+      grid-row: 1;
+      width: 100%;
+      max-width: 250px;
+      margin: auto auto; }
+  main .hamMenu .right .text {
+    grid-column: 2;
+    text-align: right; }
   main .hamMenu .right p {
-    margin-left: 50px; }
-  main .hamMenu .right .price {
-    margin-left: 50px; }
+    text-align: right; }
   main .hamMenu .right img {
-    left: 280px; }
-  main .hamMenu .left h4 {
-    margin-left: 50px; }
-  main .hamMenu .left h5 {
-    margin-left: 50px; }
-  main .hamMenu .left p {
-    margin-left: 50px; }
-  main .hamMenu .left .price {
-    margin-left: 50px; }
+    grid-column: 1; }
+  main .hamMenu .left .text {
+    text-align: left;
+    grid-column: 1; }
   main .hamMenu .left img {
-    left: 280px; }
+    grid-column: 2; }
 main .opening {
   text-align: center;
   display: grid;
@@ -647,6 +656,32 @@ main .newsletter {
       background-size: 100%;
       width: 3em;
       height: 3em; }
+      header .hamburger:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite; }
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg); }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg); }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg); }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg); }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg); }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg); }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg); }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg); }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg); }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg); } }
     header .home h1 {
       font-size: 50px; }
     header .home h4 {
@@ -673,33 +708,26 @@ main .newsletter {
       outline: none;
       border: none;
       background-color: #cdcdcd;
-      margin: 0px auto; }
+      margin: 0px auto;
+      padding: 3em; }
   main .about {
     padding: 2em; }
     main .about button {
       margin: 0 auto; }
   main .hamMenu .hamItem {
-    text-align: center;
     height: auto;
     max-width: 80%;
     margin: 0 auto;
     margin-top: 2em; }
-    main .hamMenu .hamItem h4 {
-      margin: 0 auto;
-      padding: 1em; }
-    main .hamMenu .hamItem h5 {
-      margin: 0 auto; }
-    main .hamMenu .hamItem .price {
-      margin: 0 auto;
-      position: initial; }
-    main .hamMenu .hamItem p {
-      width: 80%;
-      text-align: center;
-      margin: 0 auto; }
+    main .hamMenu .hamItem .text {
+      grid-row: 1;
+      grid-column: 1/3;
+      text-align: center; }
+      main .hamMenu .hamItem .text p {
+        text-align: center; }
     main .hamMenu .hamItem img {
-      display: block;
-      margin: 0 auto;
-      position: initial;
+      grid-row: 2;
+      grid-column: 1/3;
       padding: 1em; }
   main .reservation form {
     max-width: initial; }

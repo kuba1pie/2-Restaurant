@@ -24,10 +24,10 @@
 			<div class="menu" id="menu">
 				<nav class="navbar">
 					<a href="#home">Home</a>
-					<a href="/">Reservations</a>
-					<a href="/">Menu</a>
-					<a href="/">Blog</a>
-					<a href="/">Features</a>
+					<a href="#hamMenu">Menu</a>
+					<a href="#reservation">Reservations</a>
+					<a href="#team">Team</a>
+					<a href="#opening">Features</a>
 					<a href="#contact">Contact</a>
 				</nav>
 			</div>
@@ -44,12 +44,12 @@
 			<section class="midNav">
 				<img src="img/logoname.png" alt="Steakville">
 				<div class="midNavigation">
-					<a href="/">Home</a>
-					<a href="/">Reservations</a>
-					<a href="/">Menu</a>
-					<a href="/">Blog</a>
-					<a href="/">Features</a>
-					<a href="/">Contact</a>
+					<a href="#home">Home</a>
+					<a href="#hamMenu">Menu</a>
+					<a href="#reservation">Reservations</a>
+					<a href="#team">Team</a>
+					<a href="#opening">Features</a>
+					<a href="#contact">Contact</a>
 				</div>
 			</section>
 			<section class="rec">
@@ -65,13 +65,13 @@
 			</section>
 			<section class="food">
 				<div class="foodnav">
-					<a href="/">Home</a>
-					<a href="/">Reservations</a>
-					<a href="/">Menu</a>
+					<a href="#home">Home</a>
+					<a href="#hamMenu">Menu</a>
+					<a href="#reservation">Reservations</a>
 					<img src="img/Logo.png" alt="Logo">
-					<a href="/">Blog</a>
-					<a href="/">Features</a>
-					<a href="/">Contact</a>
+					<a href="#team">Team</a>
+					<a href="#opening">Features</a>
+					<a href="#contact">Contact</a>
 				</div>
 				<div class="organicInfo">
 					<h3>Natural life</h3>
@@ -95,12 +95,13 @@
 				</p>
 				<span class="wild">Orson Welles</span>
 			</section>
-			<section class="hamMenu" id="hamburger">
+			<section class="hamMenu" id="hamMenu">
 					<h3>Our Dishes</h3>
+					<div id="demo"></div>
 					<h2>Menu</h2>
 				<div class="hamWrapper" id="hamWrapper"></div>
 			</section>
-			<section class="opening">
+			<section class="opening" id="opening">
 				<div class="title">
 					<h3>Your welcome</h3>
 					<h2>Opening hours</h2>
@@ -117,7 +118,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="team">
+			<section class="team" id="team">
 				<h3>Our Staff</h3>
 				<h2>Meet our Staff</h2>
 				<p>
@@ -159,13 +160,20 @@
 						</div>
 				</div>
 			</section>
-			<section class="reservation">
+			<section class="reservation" id="reservation">
 				<h3>Reservation</h3>
 				<h2>Book a table</h2>
 				<form>
-					<input type="text" name="email" value="Time">
-					<input type="text" name="email" value="Date">
-					<input type="text" name="email" value="3 People">
+					<input type="time" name="email" placeholder="Time">
+					<input type="date" name="email" placeHolder="Date">
+					<input type="text" name="email" placeHolder="3 People" list="browsers">
+					<datalist id="browsers">
+						<option value="1 Person">
+						<option value="2 Peoples">
+						<option value="3 Peoples">
+						<option value="4 Peoples">
+						<option value="5 Peoples">
+					  </datalist>
 				</form>
 				<button>Book a table</button>
 			</section>
@@ -190,7 +198,7 @@
 			</section>
 			<section class="newsletter">
 				<p>Subscribe to our newsletter</p>
-				<form><input  type="text" name="email" value="E-mail"></form><button>Subscribe</button>
+				<form><input  type="text" name="email" placeholder="E-mail"></form><button>Subscribe</button>
 			</section>
 		</main>
 		<footer>
